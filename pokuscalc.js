@@ -1,4 +1,4 @@
-const obrazovka = document.getElementById("obrazovka");
+const obrazovka = document.getElementById("screen");
 
 function appendToDisplay(input) {
     obrazovka.value += input;
@@ -13,6 +13,6 @@ function calculate() {
     obrazovka.value = eval(obrazovka.value);
     }
     catch(error) {
-        obrazovka.value = "nevymýšlaj pičoviny";
+        obrazovka.value = "error";
     }
 }

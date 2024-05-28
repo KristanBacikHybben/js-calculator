@@ -1,50 +1,82 @@
+:root {
+    --digit-color: linear-gradient(0deg, black, white);
+    --operator-btn-color: linear-gradient(0deg, black, orangered);
+}
+
 body {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: linear-gradient(0deg, black, rgb(117, 117, 117));
 }
-.kalkulacka {
-    background-color: rgb(144, 237, 86);
-    max-width: 800px;
+.calculator {
+    background: linear-gradient(0deg, black, rgb(67, 135, 25));
+    max-width:600px;
     border-radius: 50px;
-    overflow: hidden;
+    position: relative;
+    margin: 50px auto;
 }
 
-#obrazovka {
-    width: 100;
-    padding: 40px;
-    margin: 20px;
-    font-size: 50px;
-    background-color: rgb(14, 165, 215);
+.cover {
+    position:absolute;
+    height: 100%;
+    top:-10%;
+    bottom:0;
+    left:0;
+    right:0;
+    display: flex;
+    background: linear-gradient(0deg,  rgb(1,1,1), rgb(144, 237, 86));
+    max-width: inherit;
+    border-radius: inherit;
+    transform: translateY(0);
+    transition: 1s ease;
+    margin: inherit;
+}
+
+.calculator:hover .cover {
+    transition: 1s ease;
+    transform: translateY(-100%);
+}
+
+#screen {
+    padding: 30px;
+    margin: 5rem 1rem 3rem 3rem;
+    font-size: 5vh;
+    background: linear-gradient(0deg,black,rgb(14, 165, 215));
     border-radius: 15px;
     box-sizing: border-box;
     text-align: left;
+    width: 80%;
+    position: center;
+    color:white;
 }
 
-#znaky {
+#buttonDiv {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 0.5rem;
     padding: 25px;
-    
 }
 
 button {
-    width: 150px;
-    height: 80px;
+    width: 6rem;
+    height: 4rem;
     border-radius: 15px;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 5vh;
+    background: var(--digit-color);
+    margin: 1px;
 }
 
 button:hover {
-    background-color: blanchedalmond;
+    background: linear-gradient(0deg, black, blanchedalmond);
+    border: 5px solid white;
 }
 
 .operator-btn {
-    background-color: orangered;
+    background: var(--operator-btn-color);
 }
 
 .operator-btn:hover {
@@ -52,9 +84,9 @@ button:hover {
 }
 
 .equalbutton {
-    background-color: blueviolet;
+    background: linear-gradient(0deg,black,blueviolet);
 }
 
 .equalbutton:hover {
-    background-color: violet;
+    background: linear-gradient(0deg,black,violet);
 }
