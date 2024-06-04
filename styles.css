@@ -75,6 +75,10 @@ button:hover {
     border: 5px solid white;
 }
 
+button:active {
+    color: white;
+}
+
 .operator-btn {
     background: var(--operator-btn-color);
 }
@@ -89,4 +93,10 @@ button:hover {
 
 .equalbutton:hover {
     background: linear-gradient(0deg,black,violet);
+}
+
+.squaredbtn {
+    font-size: 3vh;
+    text-align: right;
+    display:grid;
 }

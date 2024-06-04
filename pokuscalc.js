@@ -1,18 +1,45 @@
-const obrazovka = document.getElementById("screen");
+const displayScreen = document.getElementById("screen");
 
 function appendToDisplay(input) {
-    obrazovka.value += input;
+    displayScreen.value += input;
 }
 
 function clearDisplay() {
-    obrazovka.value = "";
+    displayScreen.value = "";
 }
 
 function calculate() {
     try {
-    obrazovka.value = eval(obrazovka.value);
+    displayScreen.value = eval(displayScreen.value);
     }
     catch(error) {
-        obrazovka.value = "error";
+        displayScreen.value = "error";
+    }
+}
+
+function squared() {
+    try {
+        displayScreen.value = Math.pow(eval(displayScreen.value), 2)    
+    }
+    catch(error) {
+        displayScreen.value = "error";
+    }
+}
+
+function cubed() {
+    try {
+        displayScreen.value = Math.pow(eval(displayScreen.value), 3)
+    }
+    catch(error) {
+        displayScreen.value = "error";
+    }
+}
+
+function root() {
+    try {
+        displayScreen.value = Math.sqrt(eval(displayScreen.value));
+    }
+    catch(error) {
+        displayScreen.value = "error";
     }
 }
